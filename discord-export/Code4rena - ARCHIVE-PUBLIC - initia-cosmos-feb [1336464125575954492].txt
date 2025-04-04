@@ -1,0 +1,318 @@
+==============================================================
+Guild: Code4rena
+Channel: ARCHIVE-PUBLIC / initia-cosmos-feb
+==============================================================
+
+[02/07/2025 14:20] itsmetechjay (pinned)
+👋 Hello and welcome to the** $80,000 in USDC Initia Cosmos** audit channel!
+
+📆 Audit opens Monday, 10 February 2025 20:00 (20:00 UTC) and runs through Monday, 24 February 2025 20:00 (20:00 UTC) (14 days).
+
+Please give a warm welcome to the Initia team, particularly @beer-1 , @Leo.init, @ALPAC4, @Sawit, @hoon, and @Harvey who will be available for questions either here in the channel or via a PRIVATE thread. You can expect them to be available in GMT+7 and GMT+9 timezones.
+
+🤖 **Documentation bot assistance:** For general questions about the codebase, give our documentation bot a try, by tagging `@Docs Wolf` in any thread (private or public) and asking your question. The bot will make its best attempt to answer based on the codebase and documentation, and link you to relevant resources.  *Docs Wolf will be available when the audit is live.*
+
+We'll be posting relevant links, documentation, etc. here, so if you intend to participate in this audit, consider enabling notifications for this channel. 🐺 ⏰
+
+Audit Page: https://code4rena.com/audits/2025-02-initia-cosmos
+
+{Reactions}
+🔥 (4) PoolTogether 
+
+[02/07/2025 14:29] itsmetechjay
+Pinned a message.
+
+
+[02/07/2025 16:58] 0xrochimaru
+https://tenor.com/view/lock-and-load-lock-load-arnold-schwarzenegger-guns-gif-7977879
+
+{Embed}
+https://tenor.com/view/lock-and-load-lock-load-arnold-schwarzenegger-guns-gif-7977879
+Code4rena - ARCHIVE-PUBLIC - initia-cosmos-feb [1336464125575954492].txt_Files/lock-and-load-lock-320E2.png
+
+{Reactions}
+😂 (3) 
+
+[02/10/2025 15:14] morningstar4112213
+https://tenor.com/view/orochimaru-naruto-og-naruto-grin-menacing-gif-25020563
+
+{Embed}
+https://tenor.com/view/orochimaru-naruto-og-naruto-grin-menacing-gif-25020563
+Code4rena - ARCHIVE-PUBLIC - initia-cosmos-feb [1336464125575954492].txt_Files/orochimaru-naruto-D3C83.png
+
+{Reactions}
+❤️ 
+
+[02/10/2025 20:14] yannouxone4all
+Hi, we have only 2 weeks for this audit ? I ask because the previous audit was on 2.5 months, 2 weeks is very low no ?
+
+{Reactions}
+💯 (4) 
+
+[02/10/2025 20:34] evokid
+I might agree with this, if there is a chance for sponsors to extend time even later.. the codebase still not small for such time. -)
+
+
+[02/10/2025 20:36] yannouxone4all
+Yeah, we suppose to need 7-9 days for just made understand the core feature a little deep
+
+{Reactions}
+✅ 
+
+[02/10/2025 23:50] 0x0107
+this contest is opened?
+
+{Reactions}
+✅ (2) 
+
+[02/11/2025 03:59] 0xbnke
+Hey, I see we only have two weeks for this audit, but the last one took 2.5 months. That’s a big difference, and two weeks might not be enough for a thorough review. Can we extend the deadline to ensure quality work?
+
+{Reactions}
+👍 (4) 
+
+[02/11/2025 12:22] lookman6596
+@hoon what cosmos sdk version is used by the protocol
+
+
+[02/11/2025 13:06] itsmetechjay
+ℹ️ Hey all, I believe you are referring to the [Zellic audit report](https://github.com/Zellic/publications/blob/master/Initia%20-%20Zellic%20Audit%20Report.pdf).  This is C4's third Initia competitive audit. Each has covered a different scope.  
+
+We don't have any planned extensions at this time.
+
+{Reactions}
+👍 
+
+[02/11/2025 13:16] 0x0107
+https://github.com/initia-labs/initia/, https://github.com/initia-labs/miniwasm, https://github.com/initia-labs/initia/
+this contest includes these repos?
+
+
+[02/11/2025 13:42] itsmetechjay
+It includes the 3 repos listed in the `Files in scope` section, correct.
+
+{Reactions}
+4739_Skeletor (2) 
+
+[02/17/2025 10:58] 0x04bytes
+so the linked module like OPinit module is considered out of scope?
+
+
+[02/17/2025 20:13] itsmetechjay
+where are you seeing it linked?
+
+
+[02/17/2025 22:57] 0x04bytes
+Inside the source code import statement. I mean in terms of module dependencies relationship.
+
+
+[02/18/2025 04:15] akxai
+hey, how to submit a finding!?
+
+
+[02/18/2025 04:42] advikaadriti
+just give it to me i will do it for you :10_10:
+
+
+[02/18/2025 05:44] akxai
+aha, smart 😏
+
+
+[02/18/2025 14:10] zsystm
+@beer-1 
+Hi, I have some questions regarding executing functions of a published Move module.
+
+When I run the following command, referenced from the Initia documentation(https://docs.initia.xyz/build-on-initia/vm-specific-tutorials/movevm/deploying-move-modules), I encounter an error:
+```sh
+> initiad tx move execute [addr] read_write write \
+  --args "string:new_string" \
+  --from [key-name] \
+  --gas auto --gas-adjustment 1.5 --gas-prices 0.15uinit \
+  --node [rpc-url]:[rpc-port] --chain-id [chain-id]
+```
+Error message: 
+```
+rpc error: code = Unknown desc = rpc error: code = Unknown desc = failed to execute message; message index: 0: VM error: status NUMBER_OF_ARGUMENTS_MISMATCH of type Verification [cosmos/cosmos-sdk@v0.50.11/baseapp/baseapp.go:1023] with gas used: '103075': unknown request
+```
+How can I properly execute a Move contract function?
+
+Additional Information:
+- The `read_write` module was deployed successfully. Running `initiad query move view [addr] read_write read` works as expected.
+- However, executing functions does not work. This issue also occurs with the "Creating Move Coin" example, leading to the same error.
+- It seems like I am unable to execute any Move modules.
+
+Any guidance on this issue would be greatly appreciated!
+
+
+[02/18/2025 14:21] beer__1
+hmm can you send the command you used?
+
+
+[02/18/2025 14:28] zsystm
+@beer-1 Thanks for quick response.
+```
+initiad tx move execute 0xA5A86C9F4ADA16B0715C426C0CC9C2FFA298389E read_write write \
+--args "string:new_string" \
+--from testkey \
+--gas auto --gas-adjustment 1.5 --gas-prices 0.15uinit \
+--chain-id local
+```
+
+
+[02/18/2025 14:28] beer__1
+seesm docs are out dated,  thanks for pointing can you try with
+```
+ --args '["string:new_string"]'
+```
+
+{Reactions}
+👍 hi5 
+
+[02/18/2025 14:29] zsystm
+That works. Thanks!
+
+{Reactions}
+hi5 
+
+[02/19/2025 13:28] franfran5067
+I'm struggling to run the `MiniWASM` minitia as a standalone chain. It immediately fails with an error from the wasm module with the error: "failed to load latest version: version of store wasm mismatch root store's version; expected 19 got 0; new stores should be added using StoreUpgrades"
+Using the default list of commands to launch it, so:
+```sh
+export CHAIN_ID=minitia
+minitiad init operator --chain-id $CHAIN_ID
+minitiad keys add operator
+minitiad genesis add-genesis-account operator 10000000000umin
+minitiad genesis add-genesis-validator operator
+minitiad start
+```
+
+
+[02/19/2025 15:51] beer__1
+Can you do 
+
+minitiad comet unsafe-reset-all
+
+
+[02/19/2025 15:52] beer__1
+Also can you try to just remove ~/.minitia ? If you had any other minitia up before
+
+
+[02/19/2025 15:52] franfran5067
+That worked! Thanks!
+
+
+[02/24/2025 20:02] C4
+**🚨 AUDIT ALERT**
+
+@🐺Wardens The **Initia Cosmos** audit is now closed! Huge thanks to everyone who participated 🔍, whether you submitted a finding or not.
+
+What's next: The sponsor team and judge will review the findings over the next couple of weeks.
+
+{Reactions}
+🔥 (3) 
+
+[03/02/2025 12:49] ifex445
+How many findings in the contest?
+
+
+[03/02/2025 13:36] daniel526
+still in judging phase
+
+
+[03/02/2025 16:59] ifex445
+okay
+
+
+[03/04/2025 04:08] ppop3896
+how long  time still need to judging?
+
+
+[03/05/2025 14:43] thebrittfactor
+The judge is wrapping up a few final things. We'll be moving to the PJ QA phase soon!
+
+
+[03/05/2025 15:06] daniel526
+it's pain having no SR role anymore
+
+{Reactions}
+empathy 
+
+[03/05/2025 16:03] 0xdemonnn
+feel the same bro 🥲
+
+
+[03/07/2025 15:14] ifex445
+okay nice
+
+
+[03/10/2025 06:50] ifex445
+any hope seeing result this week @thebrittfactor | C4
+
+
+[03/10/2025 13:00] thebrittfactor
+We should be on track for sometime this week 🙂
+
+{Reactions}
+👍 
+
+[03/10/2025 14:40] ifex445
+nice
+
+
+[03/11/2025 20:17] thebrittfactor
+🤑 🎉  Awards for **Initia Cosmos**:
+
+$41,485.57 USDC » @Bernd
+$4,259.95 USDC » 0xAlix2 (@a_kalout and @ali_shehab)
+$2,205.44 USDC » @Rhaydden
+$1,652.81 USDC » @Franfran
+$1,502.28 USDC » @oakcobalt
+$1,210.70 USDC » @ABAIKUNANBAEV
+$663.16 USDC » @Sparrow
+$395.81 USDC » @givn
+$224.29 USDC » @gxh191 GMT+8
+
+🏁 Findings summary
+--------------------------------------
+8 High risk findings
+8 Med risk findings
+591 wardens participated
+
+Top Hunter: berndartmueller
+Top Gatherer: berndartmueller
+Top QA report: Rhaydden
+
+Awards will be distributed on Polygon within the next week. Congratulations all!  💸 💸 💸
+
+⚠️ Awardees, be sure to [complete your tax reporting info](https://docs.code4rena.com/awarding/incentive-model-and-awards/awarding-process#tax-information-for-code4rena-contributors-wardens-judges-etc) if you haven't already. This must be completed within 30 days (i.e. before Thursday, 10 April 2025) to receive your award distribution for this audit.
+
+*Note: If you participated in this audit and don’t see your name on this list, please wait until the report is published and the findings are made public to check on your submissions.*
+
+{Reactions}
+🔥 (9) 👍 (3) 
+
+[03/11/2025 20:19] a_kalout
+congrats everyone!
+
+{Reactions}
+🥳 (2) 🤝 
+
+[03/13/2025 07:10] pro_king1
+@Bernd  will be grateful to  accept friend request.
+
+
+[03/13/2025 15:55] 0xaudron
+congrats everyone, excited for to report to check on the findings!🫡
+
+
+[03/26/2025 22:40] C4
+ℹ️ This channel is pending archive.   As a result, any private threads will be permanently deleted 04/04/2025 22:30. Please make sure to grab anything you might need before then.
+
+
+[04/03/2025 20:02] C4
+ℹ️ Reminder: this channel will be deleted after 24 hours.
+
+
+==============================================================
+Exported 46 message(s)
+==============================================================
